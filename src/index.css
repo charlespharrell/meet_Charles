@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+/* LIGHT THEME (default) */
+:root {
+  --bg: #f5f5f7;
+  --sidebar: #ffffff;
+  --card: #ffffff;
+  --text: #18181b;
+
+  --hover-bg: #fafafa;
+  --hover-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+}
+
+/* DARK THEME */
+.dark {
+  --bg: #09090b;
+  --sidebar: #111111;
+  --card: #18181b;
+  --text: #f4f4f5;
+
+  --hover-bg: #1f1f23;
+  --hover-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+  --accent: #a78bfa;
+  --accent-hover: #c4b5fd;
+}
