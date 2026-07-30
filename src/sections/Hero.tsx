@@ -169,7 +169,7 @@ function Hero() {
             delay: 1.5,
             duration: 0.7,
           }}
-          className="mt-20 md:mt-10 justify-center flex gap-5"
+          className="mt-10  justify-center flex gap-5"
         >
           <a
             href="#projects"

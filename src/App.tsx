@@ -4,6 +4,7 @@ import Sidebar from './Components/Sidebar'
 import About from './sections/About'
 import Experience from './sections/Experience'
 import Hero from './sections/Hero'
+import Projects from './sections/Projects'
 import Skills from './sections/Skills'
 
 
@@ -20,7 +21,7 @@ function App() {
       <div className='flex sm:hidden'>
          <MobileNav/>
       </div>
-        <main className="ml-0 sm:ml-64 w-full bg-(--bg) text-(--text) ">
+        <main className=" overflow-hidden ml-0 sm:ml-64 w-full bg-(--bg) text-(--text) ">
       {/* <ThemeToggle/> */}
         
           <Hero/>
@@ -37,8 +38,8 @@ function App() {
             <Skills/>
           </section>
 
-          <section id="projects" className="min-h-screen px-10 lg:px-20 py-20">
-            Projects
+          <section id="projects" className="min-h-screen px-10 lg:px-5 py-20">
+            <Projects/>
           </section>
 
           <section id="contact" className="min-h-screen px-10 lg:px-20 py-20">
