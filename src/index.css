@@ -8,7 +8,7 @@ body {
   background: var(--bg);
   color: var(--text);
 }
-
+/* #222 */
 :root {
   --bg: #09090b;
   --sidebar: #111111;

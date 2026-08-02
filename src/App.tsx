@@ -1,3 +1,4 @@
+import Contact  from "./sections/Contact"
 import './App.css'
 import MobileNav from './Components/MobileNav'
 import Sidebar from './Components/Sidebar'
@@ -22,7 +23,6 @@ function App() {
          <MobileNav/>
       </div>
         <main className=" overflow-hidden ml-0 sm:ml-64 w-full bg-(--bg) text-(--text) ">
-      {/* <ThemeToggle/> */}
         
           <Hero/>
 
@@ -42,8 +42,8 @@ function App() {
             <Projects/>
           </section>
 
-          <section id="contact" className="min-h-screen px-10 lg:px-20 py-20">
-            Contact
+          <section id="contact" className="min-h-screen px-10  py-20">
+            <Contact/>
           </section>
 
       </main>

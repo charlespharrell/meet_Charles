@@ -171,37 +171,13 @@ function Hero() {
           }}
           className="mt-10  justify-center flex gap-5"
         >
-          <a
-            href="#projects"
-            className="
-              rounded-xl
-              bg-(--accent)
-              px-7
-              py-4
-              font-semibold
-              text-white
-              transition-all
-              duration-300
-              hover:scale-105
-            "
-          >
+          <a href="#projects" className=" rounded-xl bg-(--accent) px-7 py-4 font-semibold text-white
+                   transition-all duration-300 hover:scale-105 ">
             View Projects
           </a>
 
-          <a
-            href="#contact"
-            className="
-              rounded-xl
-              border
-              border-(--border)
-              px-7
-              py-4
-              font-semibold
-              transition-all
-              duration-300
-              hover:bg-(--hover-bg)
-            "
-          >
+          <a href="#contact" className=" rounded-xl border border-(--border) px-7 py-4
+               font-semibold transition-all duration-300 hover:bg-(--hover-bg)">
             Contact Me
           </a>
         </motion.div>

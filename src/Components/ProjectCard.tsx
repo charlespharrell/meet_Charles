@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight,  } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import {  LuGithub } from "react-icons/lu";
 
 type ProjectProps = {
   title: string;
@@ -21,27 +22,14 @@ function ProjectCard({
   github,
 }: ProjectProps) {
   return (
-  <motion.div
-  initial={{ opacity: 0, y: 60 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.3 }}
-  transition={{
-    duration: 0.7,
-    ease: "easeOut",
-  }}
-  className="
-    group
-    flex
-    flex-col
-    md:flex-row
-    gap-4
-    md:items-start
-    items-center
-
-    
-   hover:text-(--accent)
-  "
->
+    <motion.div
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className="group flex flex-col md:flex-row gap-4 md:items-start items-center
+            hover:text-(--accent)"
+    >
       {/* IMAGE */}
 
       <motion.div
@@ -54,49 +42,15 @@ function ProjectCard({
         {/* Glow */}
 
         <div
-          className="
-            absolute
-            inset-0
-
-            rounded-3xl
-
-            bg-(--accent)
-
-            opacity-20
-
-            blur-[80px]
-
-            scale-90
-          "
+          className=" absolute inset-0 rounded-3xl bg-(--accent) opacity-20
+                        blur-[80px] scale-90"
         />
-
         <motion.img
-           transition={{
-    type: "spring",
-    stiffness: 220,
-  }}
+          transition={{ type: "spring", stiffness: 220 }}
           src={image}
           alt={title}
-          className="
-            relative
-
-  md:h-24
-  md:w-34
-
-  
-
-  object-cover
-
-  
-
-  border
-  border-(--border)
-
-  transition-transform
-  duration-500
-
-  group-hover:scale-105
-          "
+          className="relative md:h-30 md:w-34 object-cover border border-(--border)
+                                transition-transform duration-500 group-hover:scale-105"
         />
       </motion.div>
 
@@ -112,63 +66,21 @@ function ProjectCard({
         }}
         className="flex-1"
       >
-        <p
-          className="
-            uppercase
-            tracking-[0.2em]
-            text-xs
-            font-semibold
-            text-(--accent)
-            
-          "
-        >
+        <p className=" uppercase tracking-[0.2em] text-xs font-semibold text-(--accent)">
           {category}
         </p>
 
-        <h3 className="mt-2 text-2xl font-bold">
-          {title}
-        </h3>
+        <h3 className="mt-2 text-2xl font-bold">{title}</h3>
 
-        <p
-          className="
-            mt-4
-            leading-5
-            text-zinc-400
-          "
-        >
-          {description}
-        </p>
+        <p className=" mt-4 leading-5 text-zinc-400">{description}</p>
 
         {/* Tech */}
-
-        <div
-          className="
-            mt-5
-
-            flex
-
-            flex-wrap
-
-            gap-2
-          "
-        >
+        <div className="mt-5 flex flex-wrap gap-2">
           {tech.map((item) => (
             <span
               key={item}
-              className="
-                rounded-full
-
-                border
-
-                border-(--border)
-
-                bg-(--hover-bg)
-
-                px-3
-                py-1.5
-
-                text-xs
-              "
+              className="rounded-full border border-(--border) bg-(--hover-bg)
+                        px-3 py-1.5 text-xs"
             >
               {item}
             </span>
@@ -177,55 +89,20 @@ function ProjectCard({
 
         {/* Links */}
 
-        <div
-          className="
-            mt-6
-
-            flex
-
-            gap-6
-          "
-        >
+        <div className="mt-6 flex gap-6 ">
           <a
             href={live}
             target="_blank"
-            className="
-              flex
-              items-center
-              gap-2
-
-              text-(--accent)
-
-              font-semibold
-
-              transition-all
-
-              hover:gap-3
-            "
-          >
+            className=" flex items-center gap-2 text-(--accent) font-semibold transition-all
+                         hover:gap-3">
             Live Demo
-
             <ArrowUpRight size={18} />
           </a>
 
-          <a
-            href={github}
-            target="_blank"
-            className="
-              flex
-              items-center
-              gap-2
-
-              font-semibold
-
-              transition-all
-
-              hover:gap-3
-            "
-          >
-            GitHub
-
-            {/* <Github size={18} /> */}
+          <a href={github} target="_blank"
+            className="flex items-center gap-2 font-semibold transition-all hover:gap-3">
+                GitHub
+                <LuGithub/>
           </a>
         </div>
       </motion.div>

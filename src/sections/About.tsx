@@ -89,7 +89,7 @@ function About() {
             </motion.a>
 
             {/* Contact */}
-            <motion.a
+            {/* <motion.a
                 href="#contact" whileHover={{y: -4,}}
                 whileTap={{scale: 0.96,}}
                 transition={{duration: 0.25,}}
@@ -99,7 +99,7 @@ function About() {
             >
                 <span>Contact Me</span>
                 <ArrowRight size={18} className="transition-transform duration-30 group-hover:translate-x-1"/>
-            </motion.a>
+            </motion.a> */}
 
             </div>
         </motion.div>
