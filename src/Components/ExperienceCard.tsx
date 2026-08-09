@@ -27,11 +27,6 @@ function ExperienceCard({
         
         <div className="absolute left-0 top-0 h-full w-full bg-linear-to-br from-white/3 
                       via-transparent to-transparent pointer-events-none"/>
-      
-            <div className="absolute right-6 top-4 text-7xl font-black text-white/5 select-none
-                            pointer-events-none">
-                              {year.slice(0, 4)}
-            </div>
 
     {/* Year */}
          <span className="text-sm font-semibold tracking-wider uppercase text-(--accent)"> {year}</span>

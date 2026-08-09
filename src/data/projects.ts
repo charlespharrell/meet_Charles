@@ -1,9 +1,9 @@
-import brainwave from "../assets/images/brainwave.PNG";
-import multiStep from "../assets/images/multi-step-form.PNG";
-import countries from "../assets/images/country.PNG";
-import shoeVerse from '../assets/images/ecommerce.PNG'
-import snakeGame from '../assets/images/snakegame.PNG'
-import nike from '../assets/images/nike_landing.PNG'
+import brainwave from "../assets/images/brainwave.png";
+import multiStep from "../assets/images/multi-step-form.png";
+import countries from "../assets/images/country.png";
+import shoeVerse from '../assets/images/ecommerce.png'
+import snakeGame from '../assets/images/snakegame.png'
+import nike from '../assets/images/nike_landing.png'
 
 export const projects = [
   {

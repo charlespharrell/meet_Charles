@@ -1,6 +1,15 @@
 export const experiences = [
+   {
+    year: "August 2026 - Present",
+    role: "Frontend Engineer",
+    company: "PitchMatter",
+    location: "Remote",
+    description:
+      "Contributing to real-world software projects while collaborating with cross-functional teams to design, develop, and improve scalable web applications.",
+    skills: ["React", "TypseScript","TailwindCSS","REST API", "LLMs"],
+  },
   {
-    year: "2026 - Present",
+    year: "July 2026 - Present",
     role: "Frontend AI Engineer",
     company: "FlyRank",
     location: "Remote",
@@ -10,7 +19,7 @@ export const experiences = [
   },
 
   {
-    year: "2026",
+    year: "May 2026",
     role: "Frontend Engineer",
     company: "CodeAlpha",
     location: "Remote",
@@ -30,7 +39,7 @@ export const experiences = [
   },
 
   {
-    year: "2023",
+    year: "Jan 2023 – Oct 2023",
     role: "Frontend Engineer & STEM Educator",
     company: "Dumena Technologies",
     location: "Abuja, Nigeria",
@@ -40,7 +49,7 @@ export const experiences = [
   },
 
   {
-    year: "2022",
+    year: "Feb 2022 – Oct 2022",
     role: "Frontend Developer Intern",
     company: "New Horizons",
     location: "Lagos, Nigeria",
