@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import myImage from '../assets/myimage.jpg'
-import { Download, ArrowRight } from "lucide-react";
+import { Download} from "lucide-react";
 
 function About() {
   return (
@@ -87,19 +87,6 @@ function About() {
                 />
                 <span>Download CV</span>
             </motion.a>
-
-            {/* Contact */}
-            {/* <motion.a
-                href="#contact" whileHover={{y: -4,}}
-                whileTap={{scale: 0.96,}}
-                transition={{duration: 0.25,}}
-                className="group flex items-center gap-3 rounded-xl border border-(--accent)
-                px-3 lg:px-7  py-4 font-medium text-(--accent) transition-colors duration-300 hover:bg-(--accent) hover:text-white
-                "
-            >
-                <span>Contact Me</span>
-                <ArrowRight size={18} className="transition-transform duration-30 group-hover:translate-x-1"/>
-            </motion.a> */}
 
             </div>
         </motion.div>

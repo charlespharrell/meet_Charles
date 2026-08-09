@@ -33,7 +33,7 @@ function Projects() {
     gap-x-14
     gap-y-20
   ">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <ProjectCard
               key={project.title}
               {...project}
