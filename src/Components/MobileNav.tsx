@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { navItems } from "../data/navItems";
 
-function MobileNav() {
-  const [active, setActive] = useState("Home");
+// function MobileNav() {
+  type MobileNavProps = {
+  activeSection: string;
+};
+
+function MobileNav({ activeSection }: MobileNavProps) {
 
   return (
     <motion.nav
@@ -20,13 +23,13 @@ function MobileNav() {
           <div className="flex items-center justify-between">
             {navItems.map((item) => {
               const Icon = item.icon;
-              const isActive = active === item.name;
+              const isActive = activeSection === item.id;
+              
 
               return (
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  onClick={() => setActive(item.name)}
                   className="relative flex flex-col items-center"
                   whileTap={{ scale: 0.9 }}
                 >

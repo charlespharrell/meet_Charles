@@ -2,6 +2,10 @@ import {navItems} from '../data/navItems'
 import myImage from '../assets/myimage.jfif'
 import { motion, type Variants } from "framer-motion";
 
+type SidebarProps = {
+  activeSection: string;
+};
+
 const sidebarVariants: Variants = {
   hidden: {
     x: -80,
@@ -33,7 +37,7 @@ const itemVariants = {
   },
 };
 
-const Sidebar = () => {
+const Sidebar = ({ activeSection }: SidebarProps) => {
   return (
     <motion.aside
       variants={sidebarVariants}
@@ -42,8 +46,6 @@ const Sidebar = () => {
       className="hidden sm:flex fixed left-0 top-0 h-screen w-50 w-64 flex-col 
                   justify-between px-6 py-4  text-(--text) border-r border-(--border)
                   backdrop-blur-xl bg-(--bg)/85"
-                  // transition-all duration-500 bg-(--bg)
-          
       >
       <motion.div
         variants={itemVariants}
@@ -75,19 +77,33 @@ const Sidebar = () => {
       <nav className="mt-2 flex flex-col gap-0" >
         {navItems.map((item) => {
           const Icon = item.icon;
+          const isActive = activeSection === item.id;
           return (
             <motion.a
               variants={itemVariants}
               key={item.name}
               href={item.href}
-              className=" group flex items-center justify-start gap-4 px-4 py-3 rounded-xl 
-              hover:bg-(--hover-bg) hover:translate-x-1 transition-all duration-300 " >
-              
+              className={`group flex items-center justify-start gap-4 px-4
+                          py-3 rounded-xl transition-all duration-300
+
+                  ${
+                    isActive
+                      ? "bg-(--hover-bg) text-(--accent)"
+                      : "hover:bg-(--hover-bg) hover:translate-x-1"
+                  }
+                `}
+              >
               <Icon
                 size={20}
-                className=" group-hover:scale-110 transition-transform
-                " />
-              <span className=" group-hover:text-(--accent)">{item.name}</span>
+                className={`transition-transform duration-300
+                  ${isActive ? "scale-110" : "group-hover:scale-110"}
+                `}
+/>
+              <span
+                  className={`${isActive ? "text-(--accent)" : ""}`}
+                >
+                  {item.name}
+                </span>
             </motion.a>
           );
         })}

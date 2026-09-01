@@ -7,20 +7,41 @@ import Experience from './sections/Experience'
 import Hero from './sections/Hero'
 import Projects from './sections/Projects'
 import Skills from './sections/Skills'
+import { useState, useEffect } from "react"
 
 
 function App() {
+const [activeSection, setActiveSection] = useState("home");
 
+useEffect(() => {
+  const sections = document.querySelectorAll("section[id]");
 
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  return () => observer.disconnect();
+}, []);
   return (
     <>
 
     <div className='flex'>
       <div className='hidden sm:flex'>
-          <Sidebar />
+          <Sidebar activeSection={activeSection}  />
       </div>
       <div className='flex sm:hidden'>
-         <MobileNav/>
+         <MobileNav activeSection={activeSection}/>
       </div>
         <main className=" overflow-hidden ml-0 sm:ml-64 w-full bg-(--bg) text-(--text) ">
         
