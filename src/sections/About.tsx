@@ -81,7 +81,7 @@ function About() {
 
             {/* Download CV */}
             <motion.a
-                href="/Charles_Udenwoke_Resume.pdf"
+                href="/Charles's_résumé.docx.pdf"
                 download whileHover={{y: -4,scale: 1.03,}}
                 whileTap={{scale: 0.96,}}
                 transition={{duration: 0.25,}}
