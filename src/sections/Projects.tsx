@@ -5,7 +5,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="border-b border-(--border) py-20 px-0 lg:px-0"
+      className="border-b border-(--border) pb-20 px-0 lg:px-0"
     >
       <div className="mx-auto max-w-7xl">
 

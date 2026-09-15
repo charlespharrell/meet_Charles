@@ -1,5 +1,6 @@
 import {navItems} from '../data/navItems'
-import myImage from '../assets/myimage.jfif'
+import myImage from '../assets/myimage-304.webp'
+import myImageFallback from '../assets/myimage.jpg'
 import { motion, type Variants } from "framer-motion";
 
 type SidebarProps = {
@@ -43,7 +44,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
       variants={sidebarVariants}
       initial="hidden"
       animate="visible"
-      className="hidden sm:flex fixed left-0 top-0 h-screen w-50 w-64 flex-col 
+      className="hidden sm:flex fixed left-0 top-0 h-screen w-64 flex-col 
                   justify-between px-6 py-4  text-(--text) border-r border-(--border)
                   backdrop-blur-xl bg-(--bg)/85"
       >
@@ -57,8 +58,14 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
             whileHover={{ scale: 1.05, rotate: 2,}}
             transition={{type: "spring", stiffness: 250, damping: 15,}}
             src={myImage} alt="Charles Udenwoke"
+            width={152}
+            height={152}
+            loading="eager"
+            decoding="async"
+            style={{ aspectRatio: '1 / 1' }}
+            onError={(e) => { (e.currentTarget as HTMLImageElement).src = myImageFallback; }}
             className="h-38 w-38 rounded-full object-cover border-4 lg:border-10 border-(--border)
-                     transition-all duration-500 hover:scale-105 hover:rotate-2 shadow-[0_12px_35px_rgba(0,0,0,0.45)]"
+                     transition-[transform,border-color] duration-500 hover:scale-105 hover:rotate-2 shadow-[0_12px_35px_rgba(0,0,0,0.45)]"
           />
         </div>
       </motion.div>
@@ -89,7 +96,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
                   ${
                     isActive
                       ? "bg-(--hover-bg) text-(--accent)"
-                      : "hover:bg-(--hover-bg) hover:translate-x-1"
+                      : "hover:bg-(--hover-bg) text-(--accent-hover) hover:translate-x-1"
                   }
                 `}
               >

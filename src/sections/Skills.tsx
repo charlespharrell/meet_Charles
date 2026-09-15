@@ -60,7 +60,8 @@ function Skills() {
                 once: true,
               }}
               transition={{
-                delay: index * 0.08,
+                delay: Math.min(index * 0.05, 0.3),
+                duration: 0.5,
               }}
             >
               <SkillCard skill={skill} />
@@ -93,7 +94,8 @@ function Skills() {
                 once: true,
               }}
               transition={{
-                delay: index * 0.08,
+                delay: Math.min(index * 0.05, 0.25),
+                duration: 0.5,
               }}
             >
               <SkillCard skill={skill} />

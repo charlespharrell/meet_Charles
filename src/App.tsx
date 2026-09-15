@@ -11,7 +11,7 @@ import { useState, useEffect } from "react"
 
 
 function App() {
-const [activeSection, setActiveSection] = useState("home");
+const [activeSection, setActiveSection] = useState("");
 
 useEffect(() => {
   const sections = document.querySelectorAll("section[id]");
@@ -26,6 +26,7 @@ useEffect(() => {
     },
     {
       threshold: 0.1,
+      
     }
   );
 
@@ -55,7 +56,7 @@ useEffect(() => {
             <Experience/>
           </section>
 
-          <section id="skills" border-b  className="min-h-screen px-10 lg:px-5 py-20 border-b border-(--border)">
+          <section id="skills" className="min-h-screen px-10 lg:px-5 py-20 border-b border-(--border)">
             <Skills/>
           </section>
 
@@ -63,7 +64,7 @@ useEffect(() => {
             <Projects/>
           </section>
 
-          <section id="contact" className="min-h-screen px-10  py-20">
+          <section id="contact" className="min-h-screen px-10  pb-20">
             <Contact/>
           </section>
 

@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
-import myImage from "../assets/myimage.jfif";
+import { motion, useReducedMotion } from "framer-motion";
+import myImage from "../assets/myimage-80.webp";
 
 function Hero() {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <section
       id="home"
@@ -71,12 +72,12 @@ function Hero() {
   <span className="inline-flex md:hidden items-center">
      FR
 
-    <motion.span
-  animate={{
+     <motion.span
+  animate={shouldReduceMotion ? undefined : {
     rotate: [-10, 10, -10],
     y: [0, -2, 0],
   }}
-  transition={{
+  transition={shouldReduceMotion ? undefined : {
     duration: 5,
     repeat: Infinity,
     ease: "easeInOut",
@@ -96,7 +97,12 @@ function Hero() {
 >
       <img
         src={myImage}
-        alt="Charles"
+        alt="Charles Udenwoke portrait"
+        width={40}
+        height={40}
+        loading="eager"
+        decoding="async"
+        fetchPriority="high"
         className="h-full w-full object-cover"
       />
     </motion.span>

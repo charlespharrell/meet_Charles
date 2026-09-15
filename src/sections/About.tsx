@@ -1,8 +1,9 @@
-import { motion } from "framer-motion";
-import myImage from '../assets/myimage.jpg'
+import { motion, useReducedMotion } from "framer-motion";
+import myImage from '../assets/myimage-780.webp'
 import { Download} from "lucide-react";
 
 function About() {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 md:gap-5 lg:grid-cols-2">
         <motion.div
@@ -18,9 +19,14 @@ function About() {
 
                 <motion.img
                     src={myImage}
-                    alt="Charles"
+                    alt="Charles Udenwoke portrait"
+                    width={390}
+                    height={520}
+                    loading="lazy"
+                    decoding="async"
+                    style={{ aspectRatio: '390 / 520' }}
                     className="h-full w-full object-cover"
-                    whileHover={{scale: 1.03,}}
+                    whileHover={shouldReduceMotion ? undefined : {scale: 1.03,}}
                     transition={{duration: 0.4,}}
                 />
 
@@ -28,8 +34,8 @@ function About() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    animate={{y: [0, -10, 0],}}
-                    transition={{opacity: { duration: 0.6 }, scale: { duration: 0.6 },y: {
+                    animate={shouldReduceMotion ? undefined : {y: [0, -10, 0],}}
+                    transition={shouldReduceMotion ? {duration: 0.6} : {opacity: { duration: 0.6 }, scale: { duration: 0.6 },y: {
                     duration: 2.5,
                     repeat: Infinity,
                     repeatType: "loop",
