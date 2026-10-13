@@ -1,5 +1,5 @@
 import brainwave from "../assets/images/brainwave.webp";
-import shoeVerse from '../assets/images/ecommerce.webp'
+import footwear from '../assets/images/footwear.webp'
 import moveflow from '../assets/images/moveflow.webp'
 
 export const projects = [
@@ -23,6 +23,16 @@ export const projects = [
   github: "https://github.com/charlespharrell/move_flow",
 },
 
+{
+  title: "Forma",
+  category: "E-commerce",
+  description:
+    "A responsive footwear e-commerce platform featuring product discovery, category and price filtering, individual product pages, a persistent shopping cart, and a checkout flow with mock API order processing and order confirmation.",
+  image: footwear,
+  tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+  live: "https://formaecommerce.vercel.app/",
+  github: "https://github.com/charlespharrell/Forma_ecommerce",
+},
 
   {
     title: "Brainwave AI",
@@ -33,17 +43,6 @@ export const projects = [
     tech: ["React", "JavaScript", "Tailwind CSS", "Framer Motion"],
     live: "https://brainwave-7h9qdmh9q-charlespharrells-projects.vercel.app/",
     github: "https://github.com/charlespharrell/brainwave",
-  },
-
-  {
-    title: "ShoeVerse",
-    category: "E-commerce",
-    description:
-      "A stylish product landing page showcasing responsive layouts, engaging visuals, and modern UI design.",
-    image: shoeVerse,
-    tech: ["React", "CSS", "JavaScript"],
-    live: "https://shoe-website-theta.vercel.app/",
-    github: "https://github.com/charlespharrell/shoe-website",
   },
 
 ];
