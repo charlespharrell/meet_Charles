@@ -1,6 +1,7 @@
 import brainwave from "../assets/images/brainwave.webp";
 import footwear from '../assets/images/footwear.webp'
 import moveflow from '../assets/images/moveflow.webp'
+import maison from '../assets/images/maison.webp'
 
 export const projects = [
 
@@ -22,6 +23,23 @@ export const projects = [
   live: "https://move-flow-rho.vercel.app/",
   github: "https://github.com/charlespharrell/move_flow",
 },
+
+{
+  title: "Maison Noir",
+  category: "Restaurant Website",
+  description:
+    "A premium, responsive fine-dining restaurant website featuring an elegant homepage, interactive menu, restaurant story, immersive gallery, and reservation request form. Designed with a refined luxury aesthetic, responsive layouts, and a focus on  performance.",
+  image: maison,
+  tech: [
+    "React",
+    "JavaScript",
+    "Vite",
+    "Tailwind CSS",
+  ],
+  live: "https://maisonnoir-five.vercel.app/",
+  github: "https://github.com/charlespharrell/maison_noir",
+},
+
 
 {
   title: "Forma",
