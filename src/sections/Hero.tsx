@@ -1,8 +1,8 @@
-import { motion, useReducedMotion } from "framer-motion";
-import myImage from "../assets/myimage-80.webp";
+import { motion,  } from "framer-motion";
+
 
 function Hero() {
-  const shouldReduceMotion = useReducedMotion();
+  // const shouldReduceMotion = useReducedMotion();
   return (
     <section
       id="home"
