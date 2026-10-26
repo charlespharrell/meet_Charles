@@ -23,8 +23,6 @@ function Hero() {
       text-lg
       md:text-xl
       font-medium
-      
-      
       text-(--muted)
     "
   >
@@ -69,8 +67,8 @@ function Hero() {
   A{" "} 
 
   {/* Mobile Version */}
-  <span className="inline-flex md:hidden items-center">
-     FR
+  {/* <span className="inline-flex md:hidden items-center">
+     
 
      <motion.span
   animate={shouldReduceMotion ? undefined : {
@@ -108,10 +106,10 @@ function Hero() {
     </motion.span>
 
     NTEND
-  </span>
+  </span> */}
 
   {/* Desktop Version */}
-  <span className="hidden md:inline">
+  <span className="">
     FRONTEND
   </span>
 </motion.h1>
@@ -154,7 +152,7 @@ function Hero() {
             mt-10
             max-w-xl
             text-lg
-            leading-8
+            
            text-center
            block
            m-auto
@@ -162,8 +160,10 @@ function Hero() {
           
           "
         >
-          With 3 years experience building scalable, interactive web applications using
-          React, TypeScript and modern frontend technologies.
+          I build React and Next.js sites and dashboards that ship and hold up on a phone. 
+          I build for businesses and brands, and I solve the parts owners actually notice:
+          slow pages, mobile layouts that break, and contact form nobody can find.
+         
         </motion.p>
 
         {/* Buttons */}
