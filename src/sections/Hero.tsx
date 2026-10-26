@@ -127,7 +127,8 @@ function Hero() {
           }}
           className="
             text-7xl
-            md:text-9xl
+            md:text-8xl
+
             font-black
             leading-none
             flex
