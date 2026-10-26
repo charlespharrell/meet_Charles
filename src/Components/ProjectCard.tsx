@@ -35,10 +35,9 @@ function ProjectCard({
       <div
         className="relative shrink-0"
       >
-        {/* Glow - cheaper box-shadow instead of blur-[80px] */}
 
         <div
-          className="absolute inset-0 rounded-3xl bg-(--accent) opacity-10 scale-90 shadow-[0_0_40px_rgba(167,139,250,0.25)]"
+          className="absolute inset-0  bg-(--accent) opacity-10 scale-90 shadow-[0_0_40px_rgba(167,139,250,0.25)]"
           aria-hidden="true"
         />
         <img
@@ -49,7 +48,7 @@ function ProjectCard({
           loading="lazy"
           decoding="async"
           style={{ aspectRatio: '340 / 300' }}
-          className="relative md:h-30 md:w-34 object-cover border border-(--border)
+          className="relative md:h-35 md:w-40 object-cover border border-(--border)
                                 transition-transform duration-500 group-hover:scale-105"
         />
       </div>
