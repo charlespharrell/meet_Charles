@@ -96,7 +96,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
                   ${
                     isActive
                       ? "bg-(--hover-bg) text-(--accent)"
-                      : "hover:bg-(--hover-bg) text-(--accent-hover) hover:translate-x-1"
+                      : " text-(--accent-hover) hover:translate-x-1"
                   }
                 `}
               >

@@ -1,6 +1,7 @@
 import veloura from '../assets/images/Veloura.webp'
 import moveflow from '../assets/images/moveflow.webp'
 import maison from '../assets/images/maison.webp'
+import stockpilot from '../assets/images/business.webp'
 
 export const projects = [
 
@@ -23,6 +24,25 @@ export const projects = [
   github: "https://github.com/charlespharrell/move_flow",
 },
 
+{
+  title: "StockPilot",
+  category: "Inventory & Business Management Dashboard",
+  description:
+    "A responsive business management dashboard for small businesses to manage inventory, record sales, track expenses, and monitor business performance. Features sales reporting, data visualisation, searchable tables, pagination, and light/dark themes.",
+  image: stockpilot,
+  tech: [
+    "React",
+    "JavaScript",
+    "Vite",
+    "Tailwind CSS",
+    "React Router",
+    "Recharts",
+    "Lucide React",
+    "LocalStorage",
+  ],
+  live: "https://stockpilot-red.vercel.app/",
+  github: "https://github.com/charlespharrell/stockpilot",
+},
 {
   title: "Maison Noir",
   category: "Restaurant Website",
